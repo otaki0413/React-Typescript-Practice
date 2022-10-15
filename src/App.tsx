@@ -3,7 +3,13 @@ import { useState } from 'react';
 import './styles.css';
 import { Todo } from './Todo';
 import { Text } from './Text';
+import { UserProfile } from './UserProfile';
 import { TodoType } from './types/todo';
+
+const user = {
+  name: 'けいいちろう'
+  // hobbies: ['映画', '焼肉', 'ドライブ']
+};
 
 export default function App() {
   const [todos, setTodos] = useState<Array<TodoType>>([]);
@@ -27,6 +33,7 @@ export default function App() {
         />
       ))}
       <Text color="red" fontSize="15px" />
+      <UserProfile user={user} />
     </div>
   );
 }
