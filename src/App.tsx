@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import './styles.css';
 import { Todo } from './Todo';
+import { Text } from './Text';
 import { TodoType } from './types/todo';
 
 export default function App() {
@@ -25,6 +26,7 @@ export default function App() {
           completed={todo.completed}
         />
       ))}
+      <Text color="red" fontSize="15px" />
     </div>
   );
 }
